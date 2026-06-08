@@ -1,0 +1,6 @@
+venv/
+data/raw_videos/
+data/frames/
+__pycache__/
+*.pyc
+*.pt
