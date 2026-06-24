@@ -6,6 +6,7 @@ import cv2
 import json
 import numpy as np
 from pathlib import Path
+from typing import Optional, List
 
 CATALOG_FILE = Path(__file__).parent.parent / "data" / "catalog.json"
 OUTPUT_DIR = Path(__file__).parent.parent / "output" / "visualizations"
@@ -102,7 +103,7 @@ def draw_frame(frame_path: str, frame_data: dict, decision_info: dict, frame_idx
     return img
 
 
-def render_video(entry: dict) -> str | None:
+def render_video(entry: dict) -> Optional[str]:
     frames_dir = entry.get("frames_dir")
     detections_file = entry.get("detections_file")
     decision_file = entry.get("decision_file")
@@ -143,7 +144,7 @@ def render_video(entry: dict) -> str | None:
     return str(output_path)
 
 
-def print_summary(catalog: list[dict]):
+def print_summary(catalog: List[dict]):
     print("\n" + "=" * 60)
     print("PLAY DECISIONS SUMMARY")
     print("=" * 60)

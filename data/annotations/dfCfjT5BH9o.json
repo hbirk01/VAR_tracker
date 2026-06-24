@@ -1,0 +1,9 @@
+{
+  "first_base_px": [
+    465,
+    202
+  ],
+  "runner_approaches_from": "left",
+  "expected": "safe",
+  "notes": "Overhead wide-angle from CF. First baseman visible at ~(465,200). HSV misses base due to red clay background."
+}

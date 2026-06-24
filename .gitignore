@@ -1,6 +1,14 @@
 venv/
 data/raw_videos/
 data/frames/
+data/videos/
+data/synced/
+output/debug/
+output/visualizations/
+output/3d_models/
+output/decisions/
 __pycache__/
 *.pyc
 *.pt
+*.mp4
+*.avi

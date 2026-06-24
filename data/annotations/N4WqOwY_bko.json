@@ -1,0 +1,8 @@
+{
+  "first_base_px": [
+    268,
+    248
+  ],
+  "play_start_frame": 130,
+  "notes": "Starts as wide pitcher view (frames 0-130, ignore). Close-up 1B view from frame 130+. White bag clearly visible at (268,248)."
+}

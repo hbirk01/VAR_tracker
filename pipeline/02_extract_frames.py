@@ -7,6 +7,7 @@ import json
 import numpy as np
 from pathlib import Path
 from tqdm import tqdm
+from typing import List, Tuple
 
 RAW_DIR = Path(__file__).parent.parent / "data" / "raw_videos"
 FRAMES_DIR = Path(__file__).parent.parent / "data" / "frames"
@@ -16,7 +17,7 @@ TARGET_FPS = 30  # normalize all to 30fps for consistent analysis
 PLAY_WINDOW_SEC = 8  # extract this many seconds around detected play
 
 
-def detect_play_window(video_path: str) -> tuple[float, float]:
+def detect_play_window(video_path: str) -> Tuple[float, float]:
     """
     Heuristic: find the most action-dense window.
     Uses frame difference (optical flow proxy) to find peak motion.
@@ -66,7 +67,7 @@ def detect_play_window(video_path: str) -> tuple[float, float]:
     return start, end
 
 
-def extract_frames(video_path: str, output_dir: Path, start_sec: float, end_sec: float) -> list[str]:
+def extract_frames(video_path: str, output_dir: Path, start_sec: float, end_sec: float) -> List[str]:
     """Extract frames at TARGET_FPS between start and end seconds."""
     output_dir.mkdir(parents=True, exist_ok=True)
     cap = cv2.VideoCapture(video_path)

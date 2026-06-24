@@ -7,6 +7,7 @@ import json
 import os
 from pathlib import Path
 from datetime import datetime
+from typing import Optional, List, Dict
 
 RAW_DIR = Path(__file__).parent.parent / "data" / "raw_videos"
 CATALOG_FILE = Path(__file__).parent.parent / "data" / "catalog.json"
@@ -22,26 +23,30 @@ SEARCH_QUERIES = [
     "baseball first base replay challenge safe out",
 ]
 
-# Direct known URLs of famous close plays (add more as found)
+# Direct known URLs of famous close plays.
+# Add real working YouTube URLs here, or use add_video.py from the command line:
+#   python pipeline/add_video.py "https://youtube.com/watch?v=..." --label "..." --expected safe
 KNOWN_URLS = [
-    # These are YouTube search results / highlight clips — add real URLs here
-    # Format: {"url": "...", "label": "description", "expected": "safe|out|unknown"}
+    # {"url": "https://www.youtube.com/watch?v=...", "label": "...", "expected": "safe"},
 ]
 
 
-def search_and_download(query: str, max_results: int = 5) -> list[dict]:
+def search_and_download(query: str, max_results: int = 5) -> List[dict]:
     """Search YouTube and download top results."""
     search_url = f"ytsearch{max_results}:{query}"
 
     out_template = str(RAW_DIR / "%(id)s.%(ext)s")
     cmd = [
         "yt-dlp",
-        "--format", "bestvideo[height<=1080][ext=mp4]+bestaudio[ext=m4a]/best[height<=1080][ext=mp4]/best",
+        "--format", "bestvideo[height<=720][vcodec^=avc]+bestaudio/bestvideo[height<=720]+bestaudio/best",
+        "--cookies-from-browser", "chrome",
         "--merge-output-format", "mp4",
         "--write-info-json",
         "--no-playlist",
         "--output", out_template,
         "--max-downloads", str(max_results),
+        "--sleep-interval", "2",
+        "--ignore-errors",                     # skip unavailable videos, keep going
         search_url,
     ]
 
@@ -61,12 +66,13 @@ def search_and_download(query: str, max_results: int = 5) -> list[dict]:
     return downloaded
 
 
-def download_direct(url: str, label: str, expected: str = "unknown") -> dict | None:
+def download_direct(url: str, label: str, expected: str = "unknown") -> Optional[dict]:
     """Download a specific known URL."""
     out_template = str(RAW_DIR / "%(id)s.%(ext)s")
     cmd = [
         "yt-dlp",
-        "--format", "bestvideo[height<=1080][ext=mp4]+bestaudio/best",
+        "--format", "bestvideo[height<=1080][vcodec^=avc]+bestaudio/bestvideo[height<=1080]+bestaudio/best",
+        "--cookies-from-browser", "chrome",
         "--merge-output-format", "mp4",
         "--write-info-json",
         "--output", out_template,
@@ -85,13 +91,13 @@ def download_direct(url: str, label: str, expected: str = "unknown") -> dict | N
     return None
 
 
-def load_catalog() -> list[dict]:
+def load_catalog() -> List[dict]:
     if CATALOG_FILE.exists():
         return json.loads(CATALOG_FILE.read_text())
     return []
 
 
-def save_catalog(entries: list[dict]):
+def save_catalog(entries: List[dict]):
     CATALOG_FILE.write_text(json.dumps(entries, indent=2))
 
 

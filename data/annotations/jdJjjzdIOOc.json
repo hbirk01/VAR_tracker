@@ -1,0 +1,7 @@
+{
+  "first_base_px": null,
+  "play_start_frame": 60,
+  "notes": "TOR headfirst slide safe at 1B, ~6s in original. Re-extracted 2-10s. Reaction shots were confusing detector.",
+  "unsuitable": true,
+  "unsuitable_reason": "Ultra-wide aerial shot \u2014 players are <20px, keypoint detection unreliable"
+}

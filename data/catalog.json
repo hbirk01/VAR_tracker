@@ -1,0 +1,160 @@
+[
+  {
+    "video_id": "dfCfjT5BH9o",
+    "url": "https://www.youtube.com/watch?v=dfCfjT5BH9o",
+    "label": "Armando Galarraga Almost Perfect Game - Jim Joyce blown call at 1B",
+    "expected": "safe",
+    "source": "Detroit Tigers",
+    "path": "data/raw_videos/dfCfjT5BH9o.mp4",
+    "size_mb": 5.0,
+    "downloaded_at": "2026-06-24T00:45:35.151841",
+    "stage": "analyzed",
+    "frames_dir": "/Users/Harvin/BaseballCV/data/frames/dfCfjT5BH9o",
+    "decision_file": "/Users/Harvin/BaseballCV/output/3d_models/dfCfjT5BH9o_decision.json",
+    "output_video": "/Users/Harvin/BaseballCV/output/visualizations/dfCfjT5BH9o_analyzed.mp4",
+    "detections_file": "/Users/Harvin/BaseballCV/data/frames/dfCfjT5BH9o/detections.json",
+    "decision": "SAFE",
+    "margin_ms": null
+  },
+  {
+    "video_id": "zBH58_0e1vc",
+    "url": "https://www.youtube.com/watch?v=zBH58_0e1vc",
+    "label": "Umpire Mechanics Teachable - Pulled Foot Play at 1B with Lance Barksdale",
+    "expected": "unknown",
+    "source": "CloseCallSports",
+    "path": "data/raw_videos/zBH58_0e1vc.mp4",
+    "size_mb": 11.0,
+    "downloaded_at": "2026-06-24T00:45:35.152150",
+    "stage": "analyzed",
+    "frames_dir": "/Users/Harvin/BaseballCV/data/frames/zBH58_0e1vc",
+    "decision_file": "/Users/Harvin/BaseballCV/output/3d_models/zBH58_0e1vc_decision.json",
+    "output_video": "/Users/Harvin/BaseballCV/output/visualizations/zBH58_0e1vc_analyzed.mp4",
+    "margin_ms": null,
+    "detections_file": "/Users/Harvin/BaseballCV/data/frames/zBH58_0e1vc/detections.json",
+    "decision": "SAFE"
+  },
+  {
+    "video_id": "yUE6stqPvqE",
+    "url": "https://www.youtube.com/watch?v=yUE6stqPvqE",
+    "label": "Teachable - Tripp Gibson Scramble to First Base",
+    "expected": "unknown",
+    "source": "CloseCallSports",
+    "path": "data/raw_videos/yUE6stqPvqE.mp4",
+    "size_mb": 9.7,
+    "downloaded_at": "2026-06-24T00:45:35.152641",
+    "stage": "analyzed",
+    "frames_dir": "/Users/Harvin/BaseballCV/data/frames/yUE6stqPvqE",
+    "output_video": "/Users/Harvin/BaseballCV/output/visualizations/yUE6stqPvqE_analyzed.mp4",
+    "margin_ms": null,
+    "detections_file": "/Users/Harvin/BaseballCV/data/frames/yUE6stqPvqE/detections.json",
+    "decision_file": "/Users/Harvin/BaseballCV/output/3d_models/yUE6stqPvqE_decision.json",
+    "decision": "OUT"
+  },
+  {
+    "video_id": "Lgzzki9JQj0",
+    "url": "https://www.youtube.com/watch?v=Lgzzki9JQj0",
+    "label": "Runner Misses Base Touch But is SAFE - Replay Review Appeal Play Boston",
+    "expected": "safe",
+    "source": "MLB",
+    "path": "data/raw_videos/Lgzzki9JQj0.mp4",
+    "size_mb": 7.7,
+    "downloaded_at": "2026-06-24T00:45:35.152733",
+    "stage": "analyzed",
+    "frames_dir": "/Users/Harvin/BaseballCV/data/frames/Lgzzki9JQj0",
+    "play_window": {
+      "start_sec": 37.5,
+      "end_sec": 45.5
+    },
+    "frame_count": 241,
+    "decision_file": "/Users/Harvin/BaseballCV/output/3d_models/Lgzzki9JQj0_decision.json",
+    "output_video": "/Users/Harvin/BaseballCV/output/visualizations/Lgzzki9JQj0_analyzed.mp4",
+    "detections_file": "/Users/Harvin/BaseballCV/data/frames/Lgzzki9JQj0/detections.json",
+    "decision": "SAFE",
+    "margin_ms": -133
+  },
+  {
+    "video_id": "N4WqOwY_bko",
+    "url": "https://www.youtube.com/watch?v=N4WqOwY_bko",
+    "label": "MLB Close Call Compilation - Most Controversial Calls",
+    "expected": "unknown",
+    "source": "SportzCrow",
+    "path": "data/raw_videos/N4WqOwY_bko.mp4",
+    "size_mb": 4.5,
+    "downloaded_at": "2026-06-24T00:45:35.152930",
+    "stage": "analyzed",
+    "frames_dir": "/Users/Harvin/BaseballCV/data/frames/N4WqOwY_bko",
+    "decision_file": "/Users/Harvin/BaseballCV/output/3d_models/N4WqOwY_bko_decision.json",
+    "output_video": "/Users/Harvin/BaseballCV/output/visualizations/N4WqOwY_bko_analyzed.mp4",
+    "margin_ms": 601,
+    "decision": "OUT",
+    "detections_file": "/Users/Harvin/BaseballCV/data/frames/N4WqOwY_bko/detections.json"
+  },
+  {
+    "path": "data/raw_videos/jdJjjzdIOOc.mp4",
+    "stage": "unsuitable",
+    "expected": "safe",
+    "source_url": "https://www.youtube.com/watch?v=jdJjjzdIOOc",
+    "notes": "TOR@SEA safe call stands at 1B in 9th, 2014",
+    "frames_dir": "data/frames/jdJjjzdIOOc",
+    "play_window": {
+      "start_sec": 9.546866666666666,
+      "end_sec": 17.546866666666666
+    },
+    "frame_count": 240,
+    "margin_ms": null,
+    "detections_file": "data/frames/jdJjjzdIOOc/detections.json",
+    "decision_file": "/Users/Harvin/BaseballCV/output/3d_models/jdJjjzdIOOc_decision.json",
+    "decision": "unsuitable"
+  },
+  {
+    "path": "data/raw_videos/Z_sxrO0tIg8.mp4",
+    "stage": "analyzed",
+    "expected": "unknown",
+    "source_url": "https://www.youtube.com/watch?v=Z_sxrO0tIg8",
+    "notes": "Umpire calls safe, then out, then safe on same 1B play",
+    "frames_dir": "/Users/Harvin/BaseballCV/data/frames/Z_sxrO0tIg8",
+    "play_window": {
+      "start_sec": 177.0,
+      "end_sec": 185.0
+    },
+    "frame_count": 241,
+    "detections_file": "/Users/Harvin/BaseballCV/data/frames/Z_sxrO0tIg8/detections.json",
+    "decision_file": "/Users/Harvin/BaseballCV/output/3d_models/Z_sxrO0tIg8_decision.json",
+    "decision": "unknown",
+    "margin_ms": null
+  },
+  {
+    "path": "data/raw_videos/7KJIRj_1v4Y.mp4",
+    "stage": "analyzed",
+    "expected": "unknown",
+    "source_url": "https://www.youtube.com/watch?v=7KJIRj_1v4Y",
+    "notes": "Teachable - 1B Umpire David Rackley close play",
+    "frames_dir": "/Users/Harvin/BaseballCV/data/frames/7KJIRj_1v4Y",
+    "play_window": {
+      "start_sec": 131.0,
+      "end_sec": 139.0
+    },
+    "frame_count": 241,
+    "detections_file": "/Users/Harvin/BaseballCV/data/frames/7KJIRj_1v4Y/detections.json",
+    "decision_file": "/Users/Harvin/BaseballCV/output/3d_models/7KJIRj_1v4Y_decision.json",
+    "decision": "SAFE",
+    "margin_ms": null
+  },
+  {
+    "path": "data/raw_videos/DAlooXeP1ms.mp4",
+    "stage": "analyzed",
+    "expected": "unknown",
+    "source_url": "https://www.youtube.com/watch?v=DAlooXeP1ms",
+    "notes": "2012 October close calls at first base",
+    "frames_dir": "/Users/Harvin/BaseballCV/data/frames/DAlooXeP1ms",
+    "play_window": {
+      "start_sec": 129.60013333333333,
+      "end_sec": 137.60013333333333
+    },
+    "frame_count": 240,
+    "detections_file": "/Users/Harvin/BaseballCV/data/frames/DAlooXeP1ms/detections.json",
+    "decision_file": "/Users/Harvin/BaseballCV/output/3d_models/DAlooXeP1ms_decision.json",
+    "decision": "OUT",
+    "margin_ms": null
+  }
+]

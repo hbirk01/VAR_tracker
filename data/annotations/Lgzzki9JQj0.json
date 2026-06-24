@@ -1,0 +1,9 @@
+{
+  "first_base_px": [
+    535,
+    238
+  ],
+  "runner_approaches_from": "left",
+  "expected": "safe",
+  "notes": "Close-up angle. Fielder diving right, first base near (535,238). Green dot at (500,230) is on foul line."
+}
