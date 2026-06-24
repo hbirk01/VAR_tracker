@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { openWebSocket, videoUrl, deleteJob } from "../api";
+import ContactTimeline from "./ContactTimeline";
 
 const STAGE_ORDER = ["download", "extract", "detect", "analyze", "render"];
 const STAGE_LABELS = {
@@ -97,20 +98,13 @@ export default function JobCard({ job: initialJob, onDelete }) {
         </div>
       )}
 
-      {/* Timing detail when done */}
+      {/* Contact timeline when done */}
       {isDone && (job.foot_ms != null || job.glove_ms != null) && (
-        <div style={styles.timingRow}>
-          {job.foot_ms != null && (
-            <span style={styles.timingChip}>
-              <span style={{ color: "var(--safe)" }}>●</span> Foot {Math.round(job.foot_ms)}ms
-            </span>
-          )}
-          {job.glove_ms != null && (
-            <span style={styles.timingChip}>
-              <span style={{ color: "var(--out)" }}>●</span> Glove {Math.round(job.glove_ms)}ms
-            </span>
-          )}
-        </div>
+        <ContactTimeline
+          footMs={job.foot_ms}
+          gloveMs={job.glove_ms}
+          decision={job.decision}
+        />
       )}
 
       {/* Error */}

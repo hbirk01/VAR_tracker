@@ -30,6 +30,12 @@ export function videoUrl(jobId) {
   return `${BASE}/api/video/${jobId}`;
 }
 
+export async function getPresets() {
+  const res = await fetch(`${BASE}/api/presets`);
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+}
+
 export function openWebSocket(jobId, onMessage) {
   const wsBase = BASE.replace(/^http/, "ws");
   const ws = new WebSocket(`${wsBase}/ws/${jobId}`);

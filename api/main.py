@@ -1,5 +1,6 @@
 """VAR Tracker API — FastAPI backend."""
 import uuid
+import json
 import asyncio
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
@@ -124,6 +125,31 @@ async def websocket_endpoint(websocket: WebSocket, job_id: str):
 
 
 # ── Health ────────────────────────────────────────────────────────────────────
+
+@app.get("/api/presets")
+def get_presets():
+    """Return catalog entries with source URLs as quick-launch presets."""
+    ROOT = Path(__file__).parent.parent
+    catalog_path = ROOT / "data" / "catalog.json"
+    if not catalog_path.exists():
+        return []
+    catalog = json.loads(catalog_path.read_text())
+    presets = []
+    for e in catalog:
+        url = e.get("source_url")
+        if not url:
+            continue
+        vid = Path(e["path"]).stem
+        presets.append({
+            "id": vid,
+            "url": url,
+            "label": e.get("notes", vid)[:60],
+            "expected": e.get("expected"),
+            "decision": e.get("decision"),
+            "margin_ms": e.get("margin_ms"),
+        })
+    return presets
+
 
 @app.get("/health")
 def health():

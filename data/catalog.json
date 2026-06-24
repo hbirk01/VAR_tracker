@@ -14,7 +14,9 @@
     "output_video": "/Users/Harvin/BaseballCV/output/visualizations/dfCfjT5BH9o_analyzed.mp4",
     "detections_file": "/Users/Harvin/BaseballCV/data/frames/dfCfjT5BH9o/detections.json",
     "decision": "SAFE",
-    "margin_ms": null
+    "margin_ms": null,
+    "source_url": "https://www.youtube.com/watch?v=dfCfjT5BH9o",
+    "notes": "Cubs/Cardinals \u2014 headfirst slide (SAFE)"
   },
   {
     "video_id": "zBH58_0e1vc",
@@ -31,7 +33,9 @@
     "output_video": "/Users/Harvin/BaseballCV/output/visualizations/zBH58_0e1vc_analyzed.mp4",
     "margin_ms": null,
     "detections_file": "/Users/Harvin/BaseballCV/data/frames/zBH58_0e1vc/detections.json",
-    "decision": "SAFE"
+    "decision": "SAFE",
+    "source_url": "https://www.youtube.com/watch?v=zBH58_0e1vc",
+    "notes": "Red Sox/Yankees \u2014 bang-bang play"
   },
   {
     "video_id": "yUE6stqPvqE",
@@ -48,7 +52,9 @@
     "margin_ms": null,
     "detections_file": "/Users/Harvin/BaseballCV/data/frames/yUE6stqPvqE/detections.json",
     "decision_file": "/Users/Harvin/BaseballCV/output/3d_models/yUE6stqPvqE_decision.json",
-    "decision": "OUT"
+    "decision": "OUT",
+    "source_url": "https://www.youtube.com/watch?v=yUE6stqPvqE",
+    "notes": "Nats/Mets \u2014 #22 slides in"
   },
   {
     "video_id": "Lgzzki9JQj0",
@@ -70,7 +76,9 @@
     "output_video": "/Users/Harvin/BaseballCV/output/visualizations/Lgzzki9JQj0_analyzed.mp4",
     "detections_file": "/Users/Harvin/BaseballCV/data/frames/Lgzzki9JQj0/detections.json",
     "decision": "SAFE",
-    "margin_ms": -133
+    "margin_ms": -133,
+    "source_url": "https://www.youtube.com/watch?v=Lgzzki9JQj0",
+    "notes": "UEFL close play \u2014 133ms margin"
   },
   {
     "video_id": "N4WqOwY_bko",
@@ -87,14 +95,16 @@
     "output_video": "/Users/Harvin/BaseballCV/output/visualizations/N4WqOwY_bko_analyzed.mp4",
     "margin_ms": 601,
     "decision": "OUT",
-    "detections_file": "/Users/Harvin/BaseballCV/data/frames/N4WqOwY_bko/detections.json"
+    "detections_file": "/Users/Harvin/BaseballCV/data/frames/N4WqOwY_bko/detections.json",
+    "source_url": "https://www.youtube.com/watch?v=N4WqOwY_bko",
+    "notes": "Rangers/Blue Jays \u2014 out by 601ms"
   },
   {
     "path": "data/raw_videos/jdJjjzdIOOc.mp4",
     "stage": "unsuitable",
     "expected": "safe",
     "source_url": "https://www.youtube.com/watch?v=jdJjjzdIOOc",
-    "notes": "TOR@SEA safe call stands at 1B in 9th, 2014",
+    "notes": "TOR@SEA 9th inning safe call (2014)",
     "frames_dir": "data/frames/jdJjjzdIOOc",
     "play_window": {
       "start_sec": 9.546866666666666,
@@ -111,7 +121,7 @@
     "stage": "analyzed",
     "expected": "unknown",
     "source_url": "https://www.youtube.com/watch?v=Z_sxrO0tIg8",
-    "notes": "Umpire calls safe, then out, then safe on same 1B play",
+    "notes": "Safe\u2192Out\u2192Safe controversy",
     "frames_dir": "/Users/Harvin/BaseballCV/data/frames/Z_sxrO0tIg8",
     "play_window": {
       "start_sec": 177.0,
@@ -128,7 +138,7 @@
     "stage": "analyzed",
     "expected": "unknown",
     "source_url": "https://www.youtube.com/watch?v=7KJIRj_1v4Y",
-    "notes": "Teachable - 1B Umpire David Rackley close play",
+    "notes": "Umpire David Rackley teachable",
     "frames_dir": "/Users/Harvin/BaseballCV/data/frames/7KJIRj_1v4Y",
     "play_window": {
       "start_sec": 131.0,
@@ -145,7 +155,7 @@
     "stage": "analyzed",
     "expected": "unknown",
     "source_url": "https://www.youtube.com/watch?v=DAlooXeP1ms",
-    "notes": "2012 October close calls at first base",
+    "notes": "2012 October close calls",
     "frames_dir": "/Users/Harvin/BaseballCV/data/frames/DAlooXeP1ms",
     "play_window": {
       "start_sec": 129.60013333333333,
